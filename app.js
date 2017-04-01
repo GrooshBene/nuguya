@@ -5,6 +5,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var fb = require('facebook-chat-api');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -54,6 +55,7 @@ app.use('/', index);
 app.use('/users', users);
 require("./routes/reservation.js")(app, Report);
 require("./routes/event.js")(app, Event);
+require("./routes/messenger.js")(app, fb);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
