@@ -12,6 +12,7 @@ var users = require('./routes/users');
 
 var app = express();
 
+
 var schema = mongoose.Schema;
 mongoose.connect("mongodb://localhost:27017/nugu", function (err) {
     if(err){
