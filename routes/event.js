@@ -8,7 +8,7 @@ function init(app, Event) {
         var event = new Event({
             _id : randomString.generate(14),
             date : req.param('date'),
-            startTime : req.param('starttime'),
+            startTime : req.param('startTime'),
             finishTime : req.param('finishTime'),
             content : req.param('content')
         });
